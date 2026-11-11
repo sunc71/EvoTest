@@ -1,0 +1,18 @@
+[llm.eval_qwen]
+model = "openai/qwen3.5-flash"
+api_key = "your-api-key-here"
+base_url = "https://api.openai.com/v1"
+temperature = 0.2
+max_message_chars = 800000
+
+[llm.eval_default]
+# Any additional LLM configuration used by --llm-config eval_default
+# model = "gpt-4o"
+# api_key = "sk-xxx"
+# temperature = 0.0
+
+[llm.embedding]
+# Used by the experience memory for retrieval; the paper uses text-embedding-v4
+model = "text-embedding-v4"
+api_key = "your-api-key-here"
+base_url = "https://api.openai.com/v1"

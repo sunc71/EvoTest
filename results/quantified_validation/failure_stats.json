@@ -1,0 +1,404 @@
+{
+  "generated_at": "2026-06-26",
+  "description": "Quantified validation: failure mode analysis for TestForge vs EvoTest",
+  "data_sources": {
+    "evotest": "/eval/outputs/kjain14__testgenevallite-test/CodeActAgent/qwen3.5-flash_maxiter_25_N_Ours_Full/output.testgeneval.jsonl",
+    "testforge": "/eval/outputs/kjain14__testgenevallite-test/CodeActAgent/qwen3.5-flash_maxiter_25_N_v1.2.1-no-hint-run_1/output.testgeneval.jsonl"
+  },
+  "evotest": {
+    "label": "EvoTest",
+    "total_instances": 160,
+    "any_pass_count": 144,
+    "any_pass_rate": 90.0,
+    "empty_generation_count": 8,
+    "empty_generation_rate": 5.0,
+    "zero_tests_count": 16,
+    "zero_tests_rate": 10.0,
+    "coverage_positive_count": 142,
+    "coverage_positive_rate": 88.75,
+    "average_coverage": 69.31,
+    "average_mutation": 59.22,
+    "error_eval_count": 8,
+    "failing_count": 16,
+    "failing_rate": 10.0,
+    "failure_categories": {
+      "zero_tests_discovered": 8,
+      "empty_generation": 8
+    },
+    "failing_instances": [
+      {
+        "instance_id": "django__django-11422-18",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-11797-30",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-12856-48",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-13710-63",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "pytest-dev__pytest-8906-62",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-14155-74",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-12700-83",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-15011-98",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-14396-103",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-15345-164",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-20154-177",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-12908-203",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "scikit-learn__scikit-learn-13497-235",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "scikit-learn__scikit-learn-13439-236",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "scikit-learn__scikit-learn-14894-237",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-12983-238",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      }
+    ]
+  },
+  "testforge": {
+    "label": "TestForge",
+    "total_instances": 160,
+    "any_pass_count": 118,
+    "any_pass_rate": 73.75,
+    "empty_generation_count": 14,
+    "empty_generation_rate": 8.75,
+    "zero_tests_count": 41,
+    "zero_tests_rate": 25.62,
+    "coverage_positive_count": 116,
+    "coverage_positive_rate": 72.5,
+    "average_coverage": 58.75,
+    "average_mutation": 41.59,
+    "error_eval_count": 8,
+    "failing_count": 42,
+    "failing_rate": 26.25,
+    "failure_categories": {
+      "zero_tests_discovered": 19,
+      "import_error": 7,
+      "empty_generation": 14,
+      "syntax_error": 2
+    },
+    "failing_instances": [
+      {
+        "instance_id": "sympy__sympy-13031-146",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-13895-163",
+        "failure_category": "import_error",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-12747-130",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-16792-39",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "astropy__astropy-7746-200",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-21612-36",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-15738-34",
+        "failure_category": "syntax_error",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-12908-203",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-18835-122",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-19487-162",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-15678-71",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-22005-21",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-13471-42",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-15790-213",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-21171-28",
+        "failure_category": "import_error",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-23191-208",
+        "failure_category": "import_error",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-14774-19",
+        "failure_category": "import_error",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-15011-98",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-20442-43",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-24909-230",
+        "failure_category": "syntax_error",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-18621-185",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-14915-20",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-14752-119",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-21055-76",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-11179-56",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-12171-125",
+        "failure_category": "import_error",
+        "coverage": 0,
+        "total_tests": 328
+      },
+      {
+        "instance_id": "sympy__sympy-17022-23",
+        "failure_category": "import_error",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-20154-177",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-22714-111",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-12497-214",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-21847-97",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-14024-136",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-15851-134",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-21614-232",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-15781-61",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-20639-86",
+        "failure_category": "import_error",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-18532-228",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "scikit-learn__scikit-learn-13496-161",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-12481-133",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "django__django-11099-192",
+        "failure_category": "empty_generation",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-21627-115",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      },
+      {
+        "instance_id": "sympy__sympy-15345-164",
+        "failure_category": "zero_tests_discovered",
+        "coverage": 0,
+        "total_tests": 0
+      }
+    ]
+  }
+}

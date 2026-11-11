@@ -1,0 +1,18 @@
+[llm.eval_default]
+# Configure your LLM here. Example:
+# model = "gpt-4o"
+# api_key = "sk-xxx"
+# temperature = 0.0
+
+[llm.eval_qwen]
+# Example for Alibaba Cloud Qwen (OpenAI-compatible):
+# model = "openai/qwen3.5-flash"
+# api_key = "your-api-key-here"
+# base_url = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+# temperature = 0.2
+# max_message_chars = 800000
+
+[llm.embedding]
+# Configure embedding model for memory retrieval:
+# model = "text-embedding-3-small"
+# api_key = "your-api-key-here"

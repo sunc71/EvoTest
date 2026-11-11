@@ -1,0 +1,96 @@
+======================================================================
+Quantified Validation: TestForge vs EvoTest Failure Analysis
+======================================================================
+
+Overall Statistics
+----------------------------------------------------------------------
+Metric                                    TestForge         EvoTest
+----------------------------------------------------------------------
+Total instances                                 160             160
+Any Pass@1                                 118 (73.8%)        144 (90.0%)
+Empty generation                            14 (8.8%)          8 (5.0%)
+0 tests discovered                          41 (25.6%)         16 (10.0%)
+Coverage > 0                               116 (72.5%)        142 (88.8%)
+Average coverage                             58.75%          69.31%
+Average mutation score                       41.59%          59.22%
+Failing instances                           42 (26.2%)         16 (10.0%)
+
+Failure Category Breakdown
+----------------------------------------------------------------------
+Category                                  TestForge         EvoTest
+----------------------------------------------------------------------
+empty_generation                            14 (8.75%)          8 (5.00%)
+import_error                                 7 (4.38%)          0 (0.00%)
+syntax_error                                 2 (1.25%)          0 (0.00%)
+zero_tests_discovered                       19 (11.88%)          8 (5.00%)
+
+LaTeX Table (for paper)
+----------------------------------------------------------------------
+
+Structural failure (0 tests + syntax): TestForge=21 (13.12%), EvoTest=8 (5.00%)
+Import / execution failure:             TestForge=7 (4.38%), EvoTest=0 (0.00%)
+Any Pass@1:                             TestForge=118 (73.75%), EvoTest=144 (90.00%)
+
+TestForge Failing Instances
+----------------------------------------------------------------------
+  sympy__sympy-13031-146                             [zero_tests_discovered]
+  sympy__sympy-13895-163                             [import_error]
+  django__django-12747-130                           [zero_tests_discovered]
+  sympy__sympy-16792-39                              [zero_tests_discovered]
+  astropy__astropy-7746-200                          [empty_generation]
+  sympy__sympy-21612-36                              [empty_generation]
+  django__django-15738-34                            [syntax_error]
+  django__django-12908-203                           [zero_tests_discovered]
+  sympy__sympy-18835-122                             [empty_generation]
+  sympy__sympy-19487-162                             [zero_tests_discovered]
+  sympy__sympy-15678-71                              [empty_generation]
+  sympy__sympy-22005-21                              [empty_generation]
+  sympy__sympy-13471-42                              [zero_tests_discovered]
+  django__django-15790-213                           [empty_generation]
+  sympy__sympy-21171-28                              [import_error]
+  sympy__sympy-23191-208                             [import_error]
+  sympy__sympy-14774-19                              [import_error]
+  sympy__sympy-15011-98                              [zero_tests_discovered]
+  sympy__sympy-20442-43                              [zero_tests_discovered]
+  sympy__sympy-24909-230                             [syntax_error]
+  sympy__sympy-18621-185                             [zero_tests_discovered]
+  django__django-14915-20                            [empty_generation]
+  django__django-14752-119                           [empty_generation]
+  sympy__sympy-21055-76                              [zero_tests_discovered]
+  django__django-11179-56                            [zero_tests_discovered]
+  sympy__sympy-12171-125                             [import_error]
+  sympy__sympy-17022-23                              [import_error]
+  sympy__sympy-20154-177                             [zero_tests_discovered]
+  sympy__sympy-22714-111                             [zero_tests_discovered]
+  django__django-12497-214                           [empty_generation]
+  sympy__sympy-21847-97                              [zero_tests_discovered]
+  sympy__sympy-14024-136                             [zero_tests_discovered]
+  django__django-15851-134                           [empty_generation]
+  sympy__sympy-21614-232                             [zero_tests_discovered]
+  django__django-15781-61                            [empty_generation]
+  sympy__sympy-20639-86                              [import_error]
+  sympy__sympy-18532-228                             [empty_generation]
+  scikit-learn__scikit-learn-13496-161               [empty_generation]
+  sympy__sympy-12481-133                             [zero_tests_discovered]
+  django__django-11099-192                           [empty_generation]
+  sympy__sympy-21627-115                             [zero_tests_discovered]
+  sympy__sympy-15345-164                             [zero_tests_discovered]
+
+EvoTest Failing Instances
+----------------------------------------------------------------------
+  django__django-11422-18                            [zero_tests_discovered]
+  django__django-11797-30                            [empty_generation]
+  django__django-12856-48                            [empty_generation]
+  django__django-13710-63                            [empty_generation]
+  pytest-dev__pytest-8906-62                         [zero_tests_discovered]
+  django__django-14155-74                            [empty_generation]
+  django__django-12700-83                            [empty_generation]
+  sympy__sympy-15011-98                              [zero_tests_discovered]
+  sympy__sympy-14396-103                             [empty_generation]
+  sympy__sympy-15345-164                             [empty_generation]
+  sympy__sympy-20154-177                             [zero_tests_discovered]
+  django__django-12908-203                           [empty_generation]
+  scikit-learn__scikit-learn-13497-235               [zero_tests_discovered]
+  scikit-learn__scikit-learn-13439-236               [zero_tests_discovered]
+  scikit-learn__scikit-learn-14894-237               [zero_tests_discovered]
+  django__django-12983-238                           [zero_tests_discovered]

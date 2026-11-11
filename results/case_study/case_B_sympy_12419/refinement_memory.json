@@ -1,0 +1,377 @@
+{
+  "repo": "sympy/sympy",
+  "entries": [
+    {
+      "content": "When standard library imports trigger deprecation warnings regarding abstract base classes during execution, perform repository-wide searches for relevant class definitions to identify and resolve import path inconsistencies, and verify and update the import paths to match the current Python interpreter's requirements.",
+      "case": ""
+    },
+    {
+      "content": "When testing solver functions that may return None for empty or inconsistent systems, use flexible assertions checking for both None and empty lists rather than strict equality.",
+      "case": ""
+    },
+    {
+      "content": "Wrap calls to functions known to raise domain-specific exceptions in try-except blocks to validate error handling paths without crashing the test suite.",
+      "case": ""
+    },
+    {
+      "content": "Ensure all symbolic constants used in test expressions are explicitly imported within the test scope to avoid NameErrors during execution.",
+      "case": ""
+    },
+    {
+      "content": "Adjust test expectations to accommodate implementation variations where functions might return None instead of empty collections for unsolvable systems.",
+      "case": ""
+    },
+    {
+      "content": "When generating executable code for external dependencies, ensure the printer logic reflects the exact API signature of the target library version to prevent runtime TypeErrors from deprecated argument formats.",
+      "case": ""
+    },
+    {
+      "content": "Test environments running code generation tools must be monitored for library version updates that may introduce breaking changes incompatible with existing printer implementations.",
+      "case": ""
+    },
+    {
+      "content": "Specific library objects representing mathematical domains are implemented as singletons or non-instantiable classes, so invoking them with parentheses triggers a TypeError instead of creating an instance.",
+      "case": ""
+    },
+    {
+      "content": "When verifying complex expression rendering, inspecting the raw string representation of the output is necessary to understand exact formatting variations before applying strict substring assertions.",
+      "case": ""
+    },
+    {
+      "content": "If a testing framework module raises ModuleNotFoundError, remove the direct import statement as the runner typically provides the environment.",
+      "case": ""
+    },
+    {
+      "content": "If an ImportError occurs for a specific class or function, search the repository structure to find the correct source module.",
+      "case": ""
+    },
+    {
+      "content": "When constructing routine objects, ensure all symbols appearing in output expressions are explicitly included in the input arguments list to satisfy validation constraints.",
+      "case": ""
+    },
+    {
+      "content": "Explicitly import all required classes and subclasses from the target module within test files to prevent NameErrors during test execution.",
+      "case": ""
+    },
+    {
+      "content": "Prefer immutable data structure variants when accessing symbolic properties to avoid AttributeError exceptions on mutable implementations.",
+      "case": ""
+    },
+    {
+      "content": "Verify the test execution environment includes necessary dependencies such as pytest before attempting to run the test suite.",
+      "case": ""
+    },
+    {
+      "content": "Ensure all required symbols, including those referenced in test assertions and external dependencies, are explicitly imported at the module level within the test module scope or within the test function scope to prevent NameError exceptions, runtime NameErrors, NameErrors caused by missing local bindings, and NameErrors during execution.",
+      "case": ""
+    },
+    {
+      "content": "Validate that test inputs conform to the expected object types for library functions to avoid AttributeError on missing methods.",
+      "case": ""
+    },
+    {
+      "content": "When instrumenting code coverage for nested packages, configure the source path to encompass the entire package directory and ensure the target module is explicitly imported prior to test execution to avoid empty data reports.",
+      "case": ""
+    },
+    {
+      "content": "For classes modeling physical systems with interdependent states, initialize all required relational parameters between entities, such as frame orientations or velocities, even when testing edge cases with zero values, to satisfy internal validation logic.",
+      "case": ""
+    },
+    {
+      "content": "Ensure all string literals passed to parsing functions are correctly enclosed in quotes to prevent syntax errors during test script execution.",
+      "case": ""
+    },
+    {
+      "content": "Explicitly declare all symbolic variables within the test function scope to avoid NameError during expression evaluation and assertion.",
+      "case": ""
+    },
+    {
+      "content": "Anticipate variations in exception types raised by the target system during error validation and handle them broadly rather than assuming a single exception class.",
+      "case": ""
+    },
+    {
+      "content": "Verify expected outputs match the actual data types returned by the parser, particularly when dealing with unbound identifiers which may resolve to string literals.",
+      "case": ""
+    },
+    {
+      "content": "When test execution logs show an unexpected interrupt signal or coverage report termination, switch to direct interpreter invocation of individual test functions to bypass the blocking process.",
+      "case": ""
+    },
+    {
+      "content": "When validating geometric properties, avoid assuming specific <relevant_class> instances expose direct containment methods; instead, utilize the dedicated <utility_function> provided by the module for property verification.",
+      "case": ""
+    },
+    {
+      "content": "Assertion logic for refinement functions must accommodate scenarios where handlers return None or the original expression when assumptions are insufficient for simplification.",
+      "case": ""
+    },
+    {
+      "content": "Symbolic expression refinement handlers require strict type validation to prevent attribute errors when primitive numeric types are passed instead of symbolic expression objects.",
+      "case": ""
+    },
+    {
+      "content": "Registry integrity tests should verify the presence of critical handlers rather than asserting an exact fixed set of dictionary keys which may change over time.",
+      "case": ""
+    },
+    {
+      "content": "Internal helper functions signaling no refinement possible via None return values require test assertions to validate both None results and unchanged expression states.",
+      "case": ""
+    },
+    {
+      "content": "Matrix expression simplification logic requires precise verification of symmetry assumptions and index relationships to correctly determine when transposition or negation applies.",
+      "case": ""
+    },
+    {
+      "content": "When encountering an ImportError for a symbol that appears to exist in the project or is known to exist within the repository, search the source code directly to determine its actual module location instead of assuming it is exported from the intended package namespace or top-level package namespace.",
+      "case": ""
+    },
+    {
+      "content": "When testing symbolic operations on <target_class>, validate that all constituent elements support the operation to prevent type mismatch errors during execution.",
+      "case": ""
+    },
+    {
+      "content": "When testing internal serialization methods, ensure external dependencies like printers are instantiated and passed correctly to avoid null reference exceptions.",
+      "case": ""
+    },
+    {
+      "content": "When testing index validation logic, ensure input formats align with the structural rank of the target object to prevent dimension mismatch errors.",
+      "case": ""
+    },
+    {
+      "content": "When testing type inference systems, verify both the returned type and its internal properties rather than relying on object identity comparisons.",
+      "case": ""
+    },
+    {
+      "content": "When testing geometric operations, enforce strict dimensionality checks that raise specific exceptions for unsupported ranks.",
+      "case": ""
+    },
+    {
+      "content": "Test function names must be valid Python identifiers containing no whitespace characters.",
+      "case": ""
+    },
+    {
+      "content": "Imports should target the top-level package namespace rather than deep internal submodules to maintain compatibility during refactoring.",
+      "case": ""
+    },
+    {
+      "content": "Class constructors and method signatures must be validated against the current library version to prevent argument count mismatches.",
+      "case": ""
+    },
+    {
+      "content": "Object attributes accessed in tests must be confirmed to exist on the instance to avoid AttributeError exceptions.",
+      "case": ""
+    },
+    {
+      "content": "Module paths for internal components require verification as they may change between releases.",
+      "case": ""
+    },
+    {
+      "content": "When testing internal namespace extraction functions, pass complete expressions with arguments rather than function instances to prevent iteration errors on non-iterable properties.",
+      "case": ""
+    },
+    {
+      "content": "Ensure test exception handlers match the specific error type raised by custom validation logic, which may differ from standard library exceptions.",
+      "case": ""
+    },
+    {
+      "content": "APIs designed to process argument lists require explicit wrapping of single items in iterables to avoid type errors during flattening operations.",
+      "case": ""
+    },
+    {
+      "content": "Integration tests for implemented functions should invoke the main conversion utility to verify the full execution context rather than calling helper functions directly.",
+      "case": ""
+    },
+    {
+      "content": "Internal serialization methods may transform native Python containers into specialized types; assertions should verify content validity rather than strict type identity.",
+      "case": ""
+    },
+    {
+      "content": "When the standard test runner module is missing or causes import errors, bypass the framework by executing a custom script that iterates over available test functions and invokes them directly to validate behavior.",
+      "case": ""
+    },
+    {
+      "content": "When validating constructor inputs, choose arguments that fail early structural checks (such as iterability) rather than those that pass through internal parsing layers to guarantee the targeted exception is raised.",
+      "case": ""
+    },
+    {
+      "content": "When a test suite fails due to missing testing framework dependencies such as pytest, refactor assertions to use native exception handling mechanisms to eliminate external requirements.",
+      "case": ""
+    },
+    {
+      "content": "Encapsulate repeated module imports within private helper functions to reduce boilerplate and centralize dependency management across test cases.",
+      "case": ""
+    },
+    {
+      "content": "Constructor validation logic distinguishes between invalid input types raising TypeError and invalid input values raising ValueError, requiring separate test cases to verify specific exception types.",
+      "case": ""
+    },
+    {
+      "content": "Subclasses may override special methods like containment checks differently than the base class, necessitating specific tests for each subclass implementation.",
+      "case": ""
+    },
+    {
+      "content": "Assertions involving mathematical results from symbolic libraries must compare against exact symbolic expressions rather than numeric approximations to avoid precision issues.",
+      "case": ""
+    },
+    {
+      "content": "Geometric transformations relying on matrix multiplication require careful verification of matrix dimensions and element placement to ensure correct coordinate mapping.",
+      "case": ""
+    },
+    {
+      "content": "When validating symbolic mathematical results, ensure expected values utilize exact symbolic representations to avoid equality assertion failures caused by implicit type conversions between floats and rationals.",
+      "case": ""
+    },
+    {
+      "content": "When testing methods that access attributes of optional dependency objects, ensure those dependencies are explicitly constructed and passed to the target class to prevent AttributeError on None.",
+      "case": ""
+    },
+    {
+      "content": "Do not assume helper methods return primitive types like strings; verify the actual object type returned by inspection scripts before writing assertions.",
+      "case": ""
+    },
+    {
+      "content": "Inspect the structure of tuples returned by recursive decomposition functions, as the number of unpacked values may depend on the specific expression node type being processed.",
+      "case": ""
+    },
+    {
+      "content": "Verify the exact type of metadata properties on domain objects, as they may be symbolic representations rather than plain strings.",
+      "case": ""
+    },
+    {
+      "content": "Test file imports must use standard dot-separated package paths (e.g., package.module) rather than underscored names to resolve correctly.",
+      "case": ""
+    },
+    {
+      "content": "Mathematical functions utilizing logarithms or powers must explicitly validate input ranges to prevent ValueError on edge cases like zero.",
+      "case": ""
+    },
+    {
+      "content": "Functions operating on sequences must handle empty inputs gracefully to avoid errors like 'min() arg is an empty sequence'.",
+      "case": ""
+    },
+    {
+      "content": "During import verification of internal dependencies, handle deprecation warnings by executing direct instantiation commands to confirm functional stability without halting execution.",
+      "case": ""
+    },
+    {
+      "content": "When test functions reference external classes such as Rational or Float, explicitly import them within the local scope to prevent NameError exceptions caused by missing global bindings.",
+      "case": ""
+    },
+    {
+      "content": "Verify the correct attribute path for singleton constants within the SymPy registry, such as using S.Exp1 instead of S.E, to avoid AttributeError when accessing mathematical constants.",
+      "case": ""
+    },
+    {
+      "content": "Ensure generated test function names adhere to strict Python identifier rules, avoiding trailing underscores or special characters that trigger SyntaxError during parsing.",
+      "case": ""
+    },
+    {
+      "content": "Verify that requested symbols are actually exported in the top-level namespace before attempting to import them in test files to prevent ImportError exceptions.",
+      "case": ""
+    },
+    {
+      "content": "Ensure all required parameters such as file paths are explicitly provided when invoking automated code editing functions to avoid silent execution failures.",
+      "case": ""
+    },
+    {
+      "content": "Run a quick import verification script to diagnose environment availability before attempting to rewrite test logic when facing import-related failures.",
+      "case": ""
+    },
+    {
+      "content": "When executing tests within this repository, utilize the project-specific test runner script to ensure proper environment setup and path resolution rather than relying on standard external test framework invocations.",
+      "case": ""
+    },
+    {
+      "content": "Before executing test scripts, verify the actual filesystem location of the target module within the repository structure, as directory layouts may differ from standard conventions.",
+      "case": ""
+    },
+    {
+      "content": "For recursive utility functions accepting depth parameters, isolate and verify edge cases such as zero-levels directly via script execution to confirm adherence to documented behavior and prevent potential hangs or incorrect returns.",
+      "case": ""
+    },
+    {
+      "content": "When testing composite algebraic expressions involving multiple operands, ensure that intermediate operation results maintain dimensional compatibility with subsequent operands to prevent runtime shape mismatch errors.",
+      "case": ""
+    },
+    {
+      "content": "When testing properties of classes with strict constructor validation, ensure test inputs satisfy all preconditions to prevent instantiation errors from masking property logic failures.",
+      "case": ""
+    },
+    {
+      "content": "Ensure all test function definitions begin with the standard test discovery prefix to maintain compatibility with the testing framework's auto-discovery mechanism.",
+      "case": ""
+    },
+    {
+      "content": "Validate that generated function identifiers are syntactically correct Python names, avoiding spaces or invalid characters that cause parser errors.",
+      "case": ""
+    },
+    {
+      "content": "When creating standalone test scripts, avoid importing testing frameworks like pytest at the module level to prevent runtime failures in environments where the framework is missing; instead, implement exception verification using native Python try-except blocks within test functions.",
+      "case": ""
+    },
+    {
+      "content": "For standalone test execution, do not rely on external framework entry points like pytest.main(); manually iterate over locally defined test functions to ensure portability.",
+      "case": ""
+    },
+    {
+      "content": "Verify import paths for utility classes; do not assume symbols or helper classes are exported from the core module they are used within.",
+      "case": ""
+    },
+    {
+      "content": "Ensure test cases account for base class limitations when invoking specialized methods; avoid assuming all instances support operations delegated to subclasses without checking for method existence.",
+      "case": ""
+    },
+    {
+      "content": "When defining callable replacements for tree traversal methods, match the function signature to the arguments unpacked during recursion (e.g., `*args`) rather than expecting single arguments.",
+      "case": ""
+    },
+    {
+      "content": "Avoid performing mathematical operations on generic base class instances in tests; use concrete subclasses that define arithmetic behavior to prevent TypeError.",
+      "case": ""
+    },
+    {
+      "content": "Validate pattern matching assertions by ensuring query structures are compatible with the target expression structure before asserting non-null results.",
+      "case": ""
+    },
+    {
+      "content": "Check return values of derivative-related methods carefully; base classes may return None or raise errors depending on argument types.",
+      "case": ""
+    },
+    {
+      "content": "Predefined instances must be explicitly imported within the test scope to access their attributes without triggering NameErrors.",
+      "case": ""
+    },
+    {
+      "content": "Arithmetic operations on specialized expression classes may simplify into new instances of the same class rather than returning raw numerical factors.",
+      "case": ""
+    },
+    {
+      "content": "Multiplication with scalar operands often preserves the original expression structure in the result object instead of evaluating to a pure scalar value.",
+      "case": ""
+    },
+    {
+      "content": "Accessing specific attributes on operation results requires verifying the resulting object type first, as mixed-type operations can yield composite objects.",
+      "case": ""
+    },
+    {
+      "content": "Verify mathematical operation results using structural checks like .has() rather than strict isinstance comparisons to account for composite expression types.",
+      "case": ""
+    },
+    {
+      "content": "Check method return types dynamically using hasattr before invoking expression methods to handle cases where primitives like integers are returned.",
+      "case": ""
+    },
+    {
+      "content": "Inspect default class attributes dynamically rather than assuming specific set representations for properties like nargs.",
+      "case": ""
+    },
+    {
+      "content": "Test properties on instantiated expressions to capture correct behavior for applied functions versus undefined classes.",
+      "case": ""
+    },
+    {
+      "content": "Handle deprecation warnings appropriately to prevent them from causing test failures.",
+      "case": ""
+    }
+  ]
+}

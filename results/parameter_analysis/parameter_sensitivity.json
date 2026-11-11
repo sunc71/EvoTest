@@ -1,0 +1,117 @@
+{
+  "paper": "EvoTest: Self-Evolving Agent for Test Suite Generation with Repository Context",
+  "rq": "RQ3: Parameter Sensitivity Analysis",
+  "description": "Sensitivity analysis of EvoTest's three key parameters",
+  "benchmark": "TestGenEval-Lite (160 instances, 11 repositories)",
+  "parameters": {
+    "constraint_memory_merge_threshold": {
+      "symbol": "\u03b8_c",
+      "name": "Constraint Memory Merge Threshold",
+      "description": "Controls deduplication rate in Constraint Memory (per-repository patterns)",
+      "default": 0.8,
+      "thresholds": [
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9
+      ],
+      "raw_size": 149,
+      "merge_rates": [
+        69.13,
+        59.06,
+        34.9,
+        16.11,
+        4.7
+      ],
+      "unique_counts": [
+        46,
+        61,
+        97,
+        125,
+        142
+      ]
+    },
+    "refinement_memory_merge_threshold": {
+      "symbol": "\u03b8_r",
+      "name": "Refinement Memory Merge Threshold",
+      "description": "Controls deduplication rate in Refinement Memory (cross-repository debugging insights)",
+      "default": 0.85,
+      "thresholds": [
+        0.7,
+        0.75,
+        0.8,
+        0.85,
+        0.9
+      ],
+      "raw_size": 324,
+      "merge_rates": [
+        32.72,
+        13.89,
+        4.94,
+        0.31,
+        0.0
+      ],
+      "unique_counts": [
+        218,
+        279,
+        308,
+        323,
+        324
+      ]
+    },
+    "jit_retrieval_threshold": {
+      "symbol": "\u03c4",
+      "name": "JIT Retrieval Threshold",
+      "description": "Controls similarity threshold for Just-In-Time Retrieval from Refinement Memory",
+      "default": 0.6,
+      "thresholds": [
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.75,
+        0.8
+      ],
+      "retrieval_rates": [
+        18.78,
+        9.03,
+        3.96,
+        1.53,
+        0.53,
+        0.13,
+        0.04
+      ]
+    }
+  },
+  "jit_relevance_analysis": {
+    "description": "Manual analysis of retrieval relevance for triggered cases",
+    "data": [
+      {
+        "threshold": 0.5,
+        "total_instances": 124,
+        "triggered_cases": 5,
+        "trigger_rate": 4.0,
+        "total_insights": 8,
+        "same_repo_insights": 3,
+        "same_repo_ratio": 37.5,
+        "relevant_insights": 3,
+        "relevant_ratio": 37.5,
+        "note": "Low precision: many cross-repo irrelevant insights"
+      },
+      {
+        "threshold": 0.6,
+        "total_instances": 20,
+        "triggered_cases": 2,
+        "trigger_rate": 10.0,
+        "total_insights": 6,
+        "same_repo_insights": 6,
+        "same_repo_ratio": 100.0,
+        "relevant_insights": 6,
+        "relevant_ratio": 100.0,
+        "note": "High precision: all insights are relevant"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "description": "Manual analysis of retrieval relevance for triggered cases",
+  "data": [
+    {
+      "threshold": 0.5,
+      "total_instances": 124,
+      "triggered_cases": 5,
+      "trigger_rate": 4.0,
+      "total_insights": 8,
+      "same_repo_insights": 3,
+      "same_repo_ratio": 37.5,
+      "relevant_insights": 3,
+      "relevant_ratio": 37.5,
+      "note": "Low precision: many cross-repo irrelevant insights"
+    },
+    {
+      "threshold": 0.6,
+      "total_instances": 20,
+      "triggered_cases": 2,
+      "trigger_rate": 10.0,
+      "total_insights": 6,
+      "same_repo_insights": 6,
+      "same_repo_ratio": 100.0,
+      "relevant_insights": 6,
+      "relevant_ratio": 100.0,
+      "note": "High precision: all insights are relevant"
+    }
+  ]
+}

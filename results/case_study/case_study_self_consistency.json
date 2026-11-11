@@ -1,0 +1,101 @@
+{
+  "generated_at": "2026-06-26",
+  "description": "Cross-file consistency verification for RQ1 case study data",
+  "cases": {
+    "A": {
+      "instance_id": "sympy__sympy-13031-146",
+      "repo": "sympy/sympy",
+      "target_module": "sympy/matrices/sparse.py",
+      "memory_type": "constraint",
+      "scores": {
+        "evo_coverage": 86.9,
+        "evo_mutation": 100.0,
+        "tf_coverage": 0.0,
+        "tf_mutation": 0.0
+      },
+      "test_stats": {
+        "evo_test_functions": 75,
+        "evo_test_classes": 0,
+        "evo_import_style": "inline_per_function",
+        "evo_tests_discovered": 78,
+        "evo_tests_passing": 70,
+        "tf_test_functions": 0,
+        "tf_test_classes": 22,
+        "tf_test_methods": 70,
+        "tf_import_style": "top_level",
+        "tf_tests_discovered": 0,
+        "tf_tests_passing": 0
+      },
+      "constraint_memory": {
+        "repo": "sympy/sympy",
+        "total_entries": 25,
+        "key_convention": "bare functions, no classes, inline imports"
+      },
+      "mechanism": "sympy bin/test runner discovers only module-level test_* functions; class-based methods are invisible",
+      "consistency": {
+        "narrative_draft": "PASS",
+        "evidence_lock": "PASS",
+        "latex": "PASS",
+        "trajectory_data": "PASS"
+      }
+    },
+    "B": {
+      "instance_id": "sympy__sympy-12419-178",
+      "repo": "sympy/sympy",
+      "target_module": "sympy/matrices/expressions/matexpr.py",
+      "memory_type": "refinement",
+      "scores": {
+        "evo_coverage": 92.57,
+        "evo_mutation": 100.0,
+        "tf_coverage": 90.09,
+        "tf_mutation": 100.0
+      },
+      "test_stats": {
+        "evo_tests_total": 715,
+        "evo_tests_passing": 164,
+        "evo_suite_lines": 4477,
+        "evo_suite_chars": 140204,
+        "tf_tests_total": 90,
+        "tf_tests_passing": 82,
+        "tf_suite_lines": 655,
+        "tf_suite_chars": 16040
+      },
+      "jit_trigger": {
+        "step": 17,
+        "timestamp": "2026-05-27T02:07:35",
+        "error_type": "ShapeError",
+        "error_message": "Matrices A*B and A are not aligned",
+        "error_operation": "matrix addition (__add__)",
+        "retrieved_entries": [
+          {
+            "relevance": 0.71,
+            "origin": "scikit-learn/scikit-learn",
+            "case": "scikit-learn__scikit-learn-14092-66",
+            "content": "Linear algebra operations must strictly validate operand shape compatibility"
+          },
+          {
+            "relevance": 0.65,
+            "origin": "scikit-learn/scikit-learn",
+            "case": "scikit-learn__scikit-learn-10949-49",
+            "content": "Assertions involving large integer representations in array shape formatting"
+          }
+        ],
+        "edit_latency_seconds": 3,
+        "edit_step": 18,
+        "total_edits_after_jit": 5
+      },
+      "consistency": {
+        "narrative_draft": "PASS",
+        "evidence_lock": "PASS",
+        "latex": "PASS",
+        "trajectory_data": "PASS"
+      }
+    }
+  },
+  "cross_case_consistency": {
+    "both_from_sympy": true,
+    "latex_line_counts_verified": true,
+    "narrative_numbers_match_trajectories": true,
+    "evidence_lock_claims_match_data": true
+  }
+}
